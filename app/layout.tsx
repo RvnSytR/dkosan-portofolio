@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
 import "@/styles/globals.css";
-import { ThemeProvider } from "@/components/global/theme-provider";
 
-// import { ThemeProvider } from "next-themes";
-// import { Toaster } from "@/components/ui/sonner";
+import { ThemeProvider } from "next-themes";
+import { Toaster } from "@/components/ui/sonner";
 // import { Protector } from "@/components/protector";
 
 const fontSans = FontSans({
@@ -32,8 +31,8 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {/* <Protector>{children}</Protector> */}
-          {/* <Toaster position="top-center" closeButton /> */}
           {children}
+          <Toaster position="top-center" closeButton />
         </ThemeProvider>
       </body>
     </html>

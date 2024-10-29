@@ -1,7 +1,5 @@
 "use client";
 
-import type { ThemeProviderProps } from "next-themes/dist/types";
-import { ThemeProvider as NextThemesProvider } from "next-themes";
 import { useTheme } from "next-themes";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { cn } from "@/lib/utils";
@@ -16,10 +14,6 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Button, type ButtonProps } from "@/components/ui/button";
 import { Moon, Sun } from "lucide-react";
-
-export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
-  return <NextThemesProvider {...props}>{children}</NextThemesProvider>;
-}
 
 export function ModeToggle({ className }: ButtonProps) {
   const isMobile = useIsMobile();
