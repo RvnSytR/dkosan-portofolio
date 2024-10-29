@@ -1,16 +1,17 @@
 "use server";
 
+import { Session } from "next-auth";
 import { revalidatePath } from "next/cache";
 import { SignInHandler } from "@/app/login/sign";
 
 import { state } from "@/lib/db/state";
 import { user } from "@/lib/db/schema";
 
-// export async function ValidateSession(session: Session) {
-//   const { id_user, username, email } = session!.user;
-//   const [res] = await state.user.getById.execute({ id_user: id_user });
-//   return res.username == username && res.email === email;
-// }
+export async function ValidateSession(session: Session) {
+  const { id_user, username, email, image } = session!.user;
+  const [res] = await state.user.getById.execute({ id_user: id_user });
+  return res.username == username && res.email === email && image === res.image;
+}
 
 export async function Check(email: string, password: string) {
   const [res] = await state.user.check.execute({

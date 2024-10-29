@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
 import "@/styles/globals.css";
 
+import { auth } from "@/lib/auth";
 import { ThemeProvider } from "next-themes";
 import { Toaster } from "@/components/ui/sonner";
-// import { Protector } from "@/components/protector";
+import { Protector } from "@/components/protector";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -16,11 +17,13 @@ export const metadata: Metadata = {
   description: "D'KOSAN - The Second Home",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const session = await auth();
+
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={fontSans.variable}>
@@ -30,8 +33,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {/* <Protector>{children}</Protector> */}
-          {children}
+          <Protector session={session}>{children}</Protector>
           <Toaster position="top-center" closeButton />
         </ThemeProvider>
       </body>
