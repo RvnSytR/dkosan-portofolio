@@ -2,7 +2,7 @@
 
 ## About the Project
 
-DKosan Portfolio is a collaborative project created by a group of friends to serve as a centralized portfolio and documentation hub. This site serves as a hub for each member to showcase their individual portfolios, highlighting skills, projects, and accomplishments. Additionally, it functions as a centralized space for documentation and galleries of all activities carried out by the dkosan.
+DKosan Portfolio is a collaborative project created by a group of friends to serve as a centralized portofolio and documentation hub. This site serves as a hub for each member to showcase their individual portofolios, highlighting skills, projects, and accomplishments. Additionally, it functions as a centralized space for documentation and galleries of all activities carried out by the dkosan.
 
 ## Tech Stack
 
