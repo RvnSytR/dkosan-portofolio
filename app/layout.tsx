@@ -12,8 +12,8 @@ const fontSans = FontSans({
 });
 
 export const metadata: Metadata = {
-  title: "DKOSAN",
-  description: "DKOSAN - The sSecond Home",
+  title: "D'KOSAN",
+  description: "D'KOSAN - The Second Home",
 };
 
 export default function RootLayout({

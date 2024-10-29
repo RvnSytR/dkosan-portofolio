@@ -14,13 +14,16 @@ import { Separator } from "@/components/ui/separator";
 import { copyrightLabel } from "@/components/content";
 
 export const metadata: Metadata = {
-  title: "Omar Archives",
+  title: "D'KOSAN | Login",
 };
 
 export default function Page() {
   return (
     <main className="container flex min-h-dvh items-center justify-center">
-      <Tabs defaultValue="login" className="w-full md:w-2/4 lg:w-1/3">
+      <Tabs
+        defaultValue="login"
+        className="my-auto h-[36rem] w-full md:w-2/4 lg:w-1/3"
+      >
         <TabsList className="grid w-full grid-cols-2">
           <TabsTrigger value="login">Masuk</TabsTrigger>
           <TabsTrigger value="register">Registrasi</TabsTrigger>
@@ -29,10 +32,12 @@ export default function Page() {
         <TabsContent value="login">
           <Card>
             <CardHeader>
-              <CardTitle className="text-center">Omar Archives</CardTitle>
+              <CardTitle className="text-center">
+                Login D&apos;Kosan Portofolio
+              </CardTitle>
               <CardDescription className="text-center">
-                Silakan masukkan email dan password akun Omar Anda di bawah ini
-                untuk mengakses Omar Archives.
+                Silakan masukkan email dan password akun D&apos;Kosan Anda di
+                bawah ini untuk mengakses D&apos;Kosan Portofolio.
               </CardDescription>
             </CardHeader>
 
@@ -45,7 +50,7 @@ export default function Page() {
             </CardContent>
 
             <CardFooter>
-              <small className="text-center">{copyrightLabel}</small>
+              <small className="mx-auto">{copyrightLabel}</small>
             </CardFooter>
           </Card>
         </TabsContent>
@@ -54,11 +59,11 @@ export default function Page() {
           <Card className="rounded-none md:rounded-md">
             <CardHeader>
               <CardTitle className="text-center">
-                Registrasi Omar Archives
+                Registrasi D&apos;Kosan Portofolio
               </CardTitle>
               <CardDescription className="text-center">
-                Masukkan detail Anda dibawah ini untuk membuat akun Omar Achives
-                Anda.
+                Masukkan detail Anda dibawah ini untuk membuat akun D&apos;Kosan
+                Portofolio.
               </CardDescription>
             </CardHeader>
 
@@ -71,7 +76,7 @@ export default function Page() {
             </CardContent>
 
             <CardFooter>
-              <small className="text-center">{copyrightLabel}</small>
+              <small className="mx-auto">{copyrightLabel}</small>
             </CardFooter>
           </Card>
         </TabsContent>

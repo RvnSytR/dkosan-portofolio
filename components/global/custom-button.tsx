@@ -3,12 +3,12 @@
 import React from "react";
 import Link from "next/link";
 import { useState } from "react";
-// import { SignOutHandler } from "@/app/login/sign";
+import { SignOutHandler } from "@/app/login/sign";
 import { RedirectHandler, RevalidatePathHandler } from "@/server/action";
 import { Delay } from "@/lib/helper";
 
 import { CustomLoader, iconSize } from "./icons";
-// import { toast } from "sonner";
+import { toast } from "sonner";
 import { Button, ButtonProps } from "../ui/button";
 import { RefreshCw } from "lucide-react";
 
@@ -85,14 +85,14 @@ export function CustomButton({
 
   const logoutHandler = async () => {
     setLoading(true);
-    // toast.promise(SignOutHandler(), {
-    //   loading: "Mengakhiri sesi...",
-    //   success: () => {
-    //     RedirectHandler("/login");
-    //     return "Berhasil Keluar. Semoga hari Anda menyenangkan!";
-    //   },
-    //   error: (e: Error) => e.message,
-    // });
+    toast.promise(SignOutHandler(), {
+      loading: "Mengakhiri sesi...",
+      success: () => {
+        RedirectHandler("/login");
+        return "Berhasil Keluar. Semoga hari Anda menyenangkan!";
+      },
+      error: (e: Error) => e.message,
+    });
   };
 
   switch (customType) {
