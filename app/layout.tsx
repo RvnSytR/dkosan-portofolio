@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
 import "@/styles/globals.css";
+import { ThemeProvider } from "@/components/global/theme-provider";
 
 // import { ThemeProvider } from "next-themes";
 // import { Toaster } from "@/components/ui/sonner";
@@ -22,19 +23,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en' suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <body className={fontSans.variable}>
-        {/* <ThemeProvider
+        <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
-          <Protector>{children}</Protector>
-          <Toaster position="top-center" closeButton />
-        </ThemeProvider> */}
-
-        {children}
+          {/* <Protector>{children}</Protector> */}
+          {/* <Toaster position="top-center" closeButton /> */}
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
