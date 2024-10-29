@@ -89,7 +89,6 @@ MYSQL_PASSWORD=yourpassword
 MYSQL_DATABASE=yourdb
 
 AUTH_SECRET=randomsecretkey
-
 ```
 
 ## Contributing Guidelines
